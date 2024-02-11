@@ -5,6 +5,7 @@
 </head>
 <body>
 <h1>Simple Calculator</h1>
+
 <form th:action="@{/add}" method="get">
     <label for="num1">Number 1:</label>
     <input type="number" id="num1" name="num1">
@@ -14,6 +15,37 @@
     <br>
     <button type="submit">Add</button>
 </form>
-<p th:text="'Result: ' + ${result}"></p>
+
+<form th:action="@{/sub}" method="get">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1">
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2">
+    <br>
+    <button type="submit">Submition</button>
+</form>
+
+<form th:action="@{/div}" method="get">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1">
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2">
+    <br>
+    <button type="submit">Division</button>
+</form>
+
+<form th:action="@{/multi}" method="get">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1">
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2">
+    <br>
+    <button type="submit">Multiplication</button>
+</form>
+
+<h2>Result: <span th:text="${result}"></span></h2>
 </body>
 </html>
